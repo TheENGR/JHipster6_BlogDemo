@@ -58,13 +58,13 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         // @formatter:off
         http
-            .csrf()
-            .disable()
-            .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
-            .exceptionHandling()
-            .authenticationEntryPoint(problemSupport)
-            .accessDeniedHandler(problemSupport)
-        .and()
+//            .csrf()
+//            .disable()
+//            .addFilterBefore(corsFilter, UsernamePasswordAuthenticationFilter.class)
+//            .exceptionHandling()
+//            .authenticationEntryPoint(problemSupport)
+//            .accessDeniedHandler(problemSupport)
+//        .and()
             .headers()
             .contentSecurityPolicy("default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data:")
         .and()
